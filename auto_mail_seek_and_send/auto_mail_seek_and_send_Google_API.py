@@ -240,10 +240,10 @@ def send_attachment(service, files_dict, date):
     for WB in files_dict:
         for WS in files_dict[WB]:
             print(files_dict[WB][WS])
-            if WS in ['Elastum','eToroX','Hodleris','Paybis','Debex']:
+            if WS in ['LP1','LP2','LP3','LP4','LP5']:
                 mimeMessage = MIMEMultipart()
                 mimeMessage['to'] = identify_lp_Test(WS)
-                mimeMessage['subject'] = f"ECP daily report for {date}"
+                mimeMessage['subject'] = f"Bank daily report for {date}"
                 mimeMessage.attach(MIMEText(email_message,'plain'))
                 # content_type, encoding = mimetypes.guess_type()
                 # content_type= 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
